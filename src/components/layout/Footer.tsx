@@ -1,6 +1,6 @@
 // src/components/layout/Footer.tsx
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react/dist/esm/icons/index";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -20,13 +20,13 @@ export function Footer() {
               and AI-powered health guidance — all in one place.
             </p>
             <div className="flex gap-3">
-              {[Mail, Phone, MapPin, Mail].map((Icon, i) => (
+              {["f", "t", "in", "yt"].map((letter) => (
                 <a
-                  key={i}
+                  key={letter}
                   href="#"
-                  className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-sky-500 transition-colors"
+                  className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-sky-500 transition-colors text-xs font-bold uppercase"
                 >
-                  <Icon className="w-4 h-4" />
+                  {letter}
                 </a>
               ))}
             </div>

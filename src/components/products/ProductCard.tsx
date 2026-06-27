@@ -41,14 +41,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
   });
 
   const wishlistMutation = useMutation({
-    mutationFn: () =>
-      isWishlisted
-        ? cartApi.removeFromWishlist(product.id)
-        : cartApi.addToWishlist(product.id),
+   mutationFn: (): Promise<unknown> =>
+     isWishlisted
+      ? cartApi.removeFromWishlist(product.id)
+      : cartApi.addToWishlist(product.id),
     onSuccess: () => {
-      setIsWishlisted((prev) => !prev);
-      toast.success(isWishlisted ? "Removed from wishlist" : "Added to wishlist");
-      queryClient.invalidateQueries({ queryKey: ["wishlist"] });
+    setIsWishlisted((prev) => !prev);
+    toast.success(isWishlisted ? "Removed from wishlist" : "Added to wishlist");
+    queryClient.invalidateQueries({ queryKey: ["wishlist"] });
     },
   });
 
