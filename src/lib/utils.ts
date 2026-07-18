@@ -7,11 +7,12 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatPrice(price: string | number): string {
   const num = typeof price === "string" ? parseFloat(price) : price;
-  if (isNaN(num)) return "$0.00";
-  return new Intl.NumberFormat("en-US", {
+  if (isNaN(num)) return "Rs. 0";
+  return new Intl.NumberFormat("en-PK", {
     style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
+    currency: "PKR",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
   }).format(num);
 }
 
