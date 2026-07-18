@@ -87,6 +87,7 @@ export interface Product {
   generic_name: string;
   strength: string;
   dosage_form: string;
+  package_size?: string;
   brand_name: string;
   brand: Brand | null;
   manufacturer: Manufacturer | null;

@@ -173,10 +173,15 @@ export function ProductCard({ product, className }: ProductCardProps) {
         )}
 
         {/* Price */}
-        <div className="flex items-center gap-2 mt-2">
-          <span className="font-bold text-gray-900">
-            {formatPrice(product.final_price)}
-          </span>
+        <div className="flex items-center gap-2 mt-2 flex-wrap">
+          <div className="flex items-baseline gap-1">
+            <span className="font-bold text-gray-900">
+              {formatPrice(product.final_price)}
+            </span>
+            {product.package_size && (
+              <span className="text-xs text-gray-400">/ {product.package_size}</span>
+            )}
+          </div>
           {product.discount_price && (
             <span className="text-xs text-gray-400 line-through">
               {formatPrice(product.price)}
