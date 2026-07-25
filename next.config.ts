@@ -24,6 +24,11 @@ const nextConfig: NextConfig = {
         hostname: "placehold.co",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+        pathname: "/**",
+      },
     ],
   },
   // Allow cross-origin requests to Django backend in development
