@@ -35,9 +35,9 @@ export default function ProductDetailPage() {
   const [reviewComment, setReviewComment] = useState("");
 
   const { data: product, isLoading } = useQuery({
-    queryKey: ["product", slug],
-    queryFn: () => productsApi.getProduct(slug).then((r) => r.data.data),
-    enabled: !!slug,
+  queryKey: ["product", slug],
+  queryFn: () => productsApi.getProduct(slug).then((r) => r.data.data ?? r.data),
+  enabled: !!slug,
   });
 
   const { data: reviews } = useQuery({
