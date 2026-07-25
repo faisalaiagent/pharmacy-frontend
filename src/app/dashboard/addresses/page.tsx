@@ -96,7 +96,7 @@ export default function AddressesPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.full_name || !form.phone_number || !form.address_line_1 || !form.city) {
+    if (!form.full_name || !form.phone_number || !form.address_line_1 || !form.city || !form.state_province) {
       toast.error("Please fill in all required fields");
       return;
     }
@@ -232,7 +232,7 @@ export default function AddressesPage() {
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-sm font-medium text-gray-700">State / Province</label>
+                <label className="text-sm font-medium text-gray-700">State / Province *</label>
                 <input
                   value={form.state_province}
                   onChange={(e) => setForm({ ...form, state_province: e.target.value })}
