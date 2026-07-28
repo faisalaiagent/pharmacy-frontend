@@ -75,7 +75,7 @@ export function Navbar() {
     >
       {/* Top bar */}
       <div className="bg-sky-500 text-white text-xs py-1.5 text-center">
-        Free delivery on orders over $50 • Prescription medicines require valid prescription
+        Free delivery on orders over Rs. 5000 • Prescription medicines require valid prescription
       </div>
 
       <div className="container mx-auto px-4">

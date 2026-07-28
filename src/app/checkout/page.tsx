@@ -109,7 +109,7 @@ export default function CheckoutPage() {
               {(addresses || []).length === 0 ? (
                 <div className="text-center py-4">
                   <p className="text-gray-500 text-sm">No saved addresses</p>
-                  <Button asChild size="sm" variant="outline" className="mt-2">
+                  <Button asChild size="sm" variant="outline">
                     <a href="/dashboard/addresses">Add Address</a>
                   </Button>
                 </div>
@@ -273,7 +273,7 @@ export default function CheckoutPage() {
 
               {shipping === 0 && (
                 <p className="text-xs text-green-600 flex items-center gap-1 mt-2">
-                  <Truck className="w-3 h-3" /> Free delivery on orders over $50
+                  <Truck className="w-3 h-3" /> Free delivery on orders over Rs. 5000
                 </p>
               )}
 
